@@ -3,7 +3,7 @@ name: 'Terraform'
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
 
 jobs:
@@ -69,5 +69,5 @@ jobs:
               body: output
             })
      - name: Terraform Apply
-       if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+       if: github.ref == 'refs/heads/main' && github.event_name == 'push'
        run: terraform apply -auto-approve
