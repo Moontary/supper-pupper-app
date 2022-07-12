@@ -5,6 +5,7 @@ variable "key_name" {
 }
 
 variable "cluster_name" {
+  default = "supper-pupper-app"
   type        = string
   description = "The name of AWS ECS cluster"
 }
